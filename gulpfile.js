@@ -14,6 +14,7 @@
 		var nano = require('gulp-cssnano');
 		var order = require("gulp-order");
 		var server = require('gulp-server-livereload');
+		var notify = require("gulp-notify");
 
 /*-----------------------------------------------------------------------------*/
 /*-----------------------    PATHS END OPTIONS     ----------------------------*/
@@ -74,7 +75,8 @@
 			.pipe(gcmq())/*turn off if sourcemaps needed*/
 			.pipe(nano(options.nano))
 			.pipe(sourcemaps.write('/'))
-			.pipe(gulp.dest(paths.build.css));
+			.pipe(gulp.dest(paths.build.css))
+			.pipe(notify("CSS compiled!"));
 	}
 
 	function sassLintTask(){
@@ -104,7 +106,8 @@
 				.pipe(uglify().on('error', function(e){
 					console.log(e);
 				}))
-				.pipe(gulp.dest(paths.build.js));
+				.pipe(gulp.dest(paths.build.js))
+				.pipe(notify("JS compiled!"));
 		}
 
 		function esLintTask(){

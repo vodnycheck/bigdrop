@@ -10,13 +10,13 @@ $(function() {
 		speed: 900,
 		loop: true,
 		autoplay: 4000,
-	})
+	});
 
 	/*modal*/
 	$(document).on('click', '#feedback', function(e) {
 		e.preventDefault();
 		$('html').addClass('js-action-popup-active');
-	})
+	});
 
 	$(document).on('click', '.js-action-popup-close', function(e) {
 		e.preventDefault();

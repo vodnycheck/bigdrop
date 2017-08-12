@@ -1,6 +1,38 @@
 .aside {
+	position: relative;
 	flex: 0 0 190px;
 	padding-right: 10px;
+
+	.list {
+		display: none;
+		@include respond-to('large') {
+			display: block;
+		}
+
+		@at-root .aside:hover .list {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background: #fff;
+			display: block;
+			@include respond-to('large') {
+				position: static;
+				width: auto;
+				top: auto;
+				left: auto;
+			}
+		}
+	}
+	
+	.title {
+		text-decoration: underline;
+		color: $color-red;
+		font-size: 18px;
+		@include respond-to('large') {
+			display: none;
+		}
+	}
 
 	.item {
 		margin-bottom: 2px;
@@ -8,7 +40,7 @@
 
 	.item-name {
 		font-weight: 300;
-		color: #767676;
+		color: $color-grey;
 		font-size: 16px;
 		line-height: 2;
 		cursor: pointer;
@@ -16,7 +48,7 @@
 
 		@at-root .item.active > .item-name,
 		&:hover {
-			color: #fa917a;
+			color: $color-red;
 		}
 	}
 
@@ -26,14 +58,14 @@
 	}
 
 	.sub-item {
-		color: #767676;
+		color: $color-grey;
 		font-size: 14px;
 		line-height: 2;
 		cursor: pointer;
 
 		&:hover,
 		&.active {
-			color: #fa917a;
+			color: $color-red;
 			text-decoration: underline;
 		}
 	}
@@ -55,7 +87,7 @@
 
 	.text {
 		display: inline-block;
-		color: #fa917a;
+		color: $color-red;
 		font-size: 16px;
 		font-weight: 400;
 		line-height: 1.6;

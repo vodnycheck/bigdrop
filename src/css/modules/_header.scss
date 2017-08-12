@@ -37,14 +37,15 @@
 	}
 
 	.contacts-number {
-		color: #767676;
+		display: block;
+		color: $color-grey;
 		font-size: 18px;
 		font-weight: 300;
 		line-height: 24px;
 	}
 
 	.btn {
-		background-color: #fa917a;
+		background-color: $color-red;
 		display: inline-block;
 		margin: 0 0 20px;
 		@include respond-to('small') {
