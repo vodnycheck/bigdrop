@@ -1,0 +1,59 @@
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	font-family: 'Arimo', sans-serif;
+	font-size: 15px;
+	color: $color-font-dark;
+	font-weight: 500;
+	overflow-x: hidden;
+	max-width: 100%;
+	position: relative;
+	line-height: 1.2;
+	background: $color-bg-light;
+}
+
+.container {
+	padding-right: 10px;
+	padding-left: 10px;
+	@media (min-width: 576px) {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	@media (min-width: 768px) {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	@media (min-width: 992px) {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	@media (min-width: 1000px) {
+		width: 1000px;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	@media (min-width: 1200px) {
+		width: 1000px;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+}
+
+
+a {
+	color: inherit;
+	text-decoration: inherit;
+	&:focus {
+		outline: none;
+		text-decoration: none;
+	}
+}
+
+img {
+	display: inline-block;
+	max-width: 100%;
+	height: auto;
+}

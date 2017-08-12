@@ -1,0 +1,13 @@
+.text-columns {
+	column-count: 1;
+	column-gap: 30px;
+	margin: 20px 0 45px;
+	@include respond-to('large') {
+		column-count: 2;
+		margin: 40px 0 155px;
+	}
+
+	p {
+		line-height: 1.75;
+	}
+}

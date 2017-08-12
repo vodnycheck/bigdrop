@@ -1,0 +1,54 @@
+.header {
+	background-color: #f7f7f7;
+	@include respond-to('medium') {
+		height: 94px;
+	}
+
+	.container {
+		height: 100%;
+		display: block;
+		align-items: center;
+		border: 1px solid transparent;
+		@include respond-to('medium') {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			height: 94px;
+		}
+	}
+
+	.logo-wrap {
+		margin: 20px 0;
+	}
+
+	.contacts {
+		display: block;
+		@include respond-to('small') {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	.contacts-numbers {
+		margin: 20px 37px 20px 0;
+		@include respond-to('medium') {
+			margin: 0 37px;
+		}
+	}
+
+	.contacts-number {
+		color: #767676;
+		font-size: 18px;
+		font-weight: 300;
+		line-height: 24px;
+	}
+
+	.btn {
+		background-color: #fa917a;
+		display: inline-block;
+		margin: 0 0 20px;
+		@include respond-to('small') {
+			margin: 0;
+		}
+	}
+}

@@ -1,0 +1,11 @@
+.main {
+	.container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		@include respond-to('large') {
+			flex-wrap: nowrap;
+		}
+	}
+}

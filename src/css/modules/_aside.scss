@@ -1,0 +1,66 @@
+.aside {
+	flex: 0 0 190px;
+	padding-right: 10px;
+
+	.item {
+		margin-bottom: 2px;
+	}
+
+	.item-name {
+		font-weight: 300;
+		color: #767676;
+		font-size: 16px;
+		line-height: 2;
+		cursor: pointer;
+
+
+		@at-root .item.active > .item-name,
+		&:hover {
+			color: #fa917a;
+		}
+	}
+
+	.sub-list {
+		list-style: disc inside;
+		margin-left: 8px;
+	}
+
+	.sub-item {
+		color: #767676;
+		font-size: 14px;
+		line-height: 2;
+		cursor: pointer;
+
+		&:hover,
+		&.active {
+			color: #fa917a;
+			text-decoration: underline;
+		}
+	}
+
+	.price {
+		margin-top: 20px;
+		@include respond-to('large') {
+			margin-top: 75px;
+		}
+	}
+
+	.image {
+		display: inline-block;
+		width: 30px;
+		height: 33px;
+		background-image: $sprite;
+		vertical-align: middle;
+	}
+
+	.text {
+		display: inline-block;
+		color: #fa917a;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 1.6;
+		vertical-align: middle;
+	}
+}
+
+

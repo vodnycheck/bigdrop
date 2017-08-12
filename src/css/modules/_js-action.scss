@@ -1,0 +1,7 @@
+.js-action-popup-active {
+	overflow: hidden;
+
+	& > * {
+		overflow: hidden;
+	}
+}
