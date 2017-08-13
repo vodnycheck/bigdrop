@@ -24,11 +24,12 @@
 			}
 		}
 	}
-	
+
 	.title {
 		text-decoration: underline;
 		color: $color-red;
 		font-size: 18px;
+		cursor: pointer;
 		@include respond-to('large') {
 			display: none;
 		}
